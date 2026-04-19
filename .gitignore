@@ -1,6 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+strategy-simulator/node_modules
 /node_modules
 /.pnp
 .pnp.js
@@ -9,6 +10,7 @@
 /coverage
 
 # production
+strategy-simulator/build
 /build
 
 # misc
@@ -22,5 +24,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/.pkl
+generated/rf_model.pkl
+generated/lr_model.pkl
+generated/gb_model.pkl
+generated/xgb_model.pkl
+generated/lgb_model.pkl
+/__pycache__
 
+strategy-simulator/package-lock.json
