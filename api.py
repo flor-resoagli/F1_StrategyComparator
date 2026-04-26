@@ -3,8 +3,10 @@ import pandas as pd
 from prepare_app import dataset
 from prepare_app import model
 
-app = Flask(__name__)
+from flask_cors import CORS
 
+app = Flask(__name__)
+CORS(app, origins=["http://localhost:3000"])
 
 @app.route("/")
 def hello():

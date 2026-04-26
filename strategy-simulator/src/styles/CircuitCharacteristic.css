@@ -1,0 +1,33 @@
+.selected {
+    color: rgb(255, 255, 255);
+    padding: 2px;
+    margin: 5px;
+    border: solid 1px rgb(212, 47, 47);
+    border-radius: 100%;
+    width: 20px;
+    text-align: center;
+    background-color: rgb(212, 47, 47);
+    font-weight: bold;
+}
+
+.not-selected {
+    color: rgb(120, 119, 119);
+    padding: 2px;
+    margin: 5px;
+    border: solid 1px rgb(120, 119, 119);
+    border-radius: 100%;
+    width: 20px;
+    text-align: center;
+    background-color: white;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.characteristics-title {
+    margin-right: 10px;
+    width: 120px;
+}    

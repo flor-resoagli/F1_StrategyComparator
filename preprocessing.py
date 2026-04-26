@@ -192,6 +192,8 @@ def dataset_preprocessing():
 
     circuit_ids = pd.Series(circuit_data.index+1 , index = circuit_data.Circuit).to_dict()
 
+    print(circuit_ids)
+
     dataset['Circuit'] = dataset['Circuit'].map(circuit_ids)
 
     dataset["Minutes"] = dataset['LapTime'].str.slice(10, 12).astype(int)

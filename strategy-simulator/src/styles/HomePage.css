@@ -1,0 +1,92 @@
+.background {
+    background-color:rgb(255, 255, 255);
+    height: 100vh;
+    width: 100vw;
+    color: rgb(0, 0, 0);
+}
+
+.title {
+    padding-left: 15px;
+}
+
+.circuit-select {
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.circuit-info-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circuit-info {
+    display: flex;
+
+}
+
+.circuit-info-details {
+    margin-right: 30px;
+}
+
+.circuit-details {
+    margin-left: 30px;
+}
+
+.tyre-info {
+    margin-left: 50px;
+}
+
+.strategy-container {
+    margin-top: 50px;
+}
+
+.laptime-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-box {
+    background-color: white;
+    width: 900px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.modal-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stint-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.select-container {
+    width: 150px;
+}
+
+
+.action-buttons {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.strategy-details-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}

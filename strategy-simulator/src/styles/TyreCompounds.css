@@ -1,0 +1,41 @@
+.compounds {
+    margin-top: 0px;
+}
+
+.compound-item {
+    display: flex;
+    align-items: center;
+}
+
+.compound-type {
+    padding: 7px;
+    border-radius: 100%;
+    background-color: rgb(120, 119, 119);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.hard {
+    border: solid 2px black;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.medium {
+    border: solid 2px rgb(255, 196, 0);
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+    color: rgb(255, 196, 0);
+}
+
+.soft {
+    border: solid 2px rgb(212, 47, 47);
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+    color: rgb(212, 47, 47);
+}
