@@ -18,6 +18,9 @@ import TextField from '@mui/material/TextField';
 import Alert from '@mui/material/Alert';
 import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
+import DeltaChart from './DeltaChart';
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
 import { expandStrategyToLaps, generateLapTimes } from '../services/StrategyService';
 
@@ -163,6 +166,8 @@ function HomePage() {
         return true;
     };
 
+    const [chartMode, setChartMode] = useState('laptimes');
+
     useEffect(() => {
         validateStints();
     }, [stints]);
@@ -228,13 +233,31 @@ function HomePage() {
                     </Grid>
                     <Grid size={7}>
                         <div class='laptime-container'>
-                            <LapTimeChart Strategies={strategies} Circuit={fullSelectedCircuit} />
+                        <ToggleButtonGroup
+                            value={chartMode}
+                            exclusive
+                            orientation="vertical"
+                            onChange={(e, value) => {
+                                if (value !== null) setChartMode(value);
+                            }}
+                            size='small'
+                            color='error'
+                            sx={{ marginBottom: 2 }}
+                        >
+                            <ToggleButton value="laptime">Lap Times</ToggleButton>
+                            <ToggleButton value="delta">Delta</ToggleButton>
+                        </ToggleButtonGroup>
+                            {chartMode === 'delta' ? 
+                                <DeltaChart Strategies={strategies} />
+                                 : 
+                                <LapTimeChart Strategies={strategies} Circuit={fullSelectedCircuit} />
+                            }
                         </div> 
                     </Grid>
                     <Grid size={3}>
-                        <h3>Strategies (max. 3)</h3>
+                        <h3>Strategies (max. 2)</h3>
                         <Button variant='contained' 
-                        disabled={strategies.length >= 3}
+                        disabled={strategies.length >= 2}
                         onClick={() => handleOpen()}
                         color='error'> Create Strategy </Button>
                         {strategies.map((strat, index) => (

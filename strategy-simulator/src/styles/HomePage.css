@@ -90,3 +90,7 @@
     width: 100%;
     align-items: center;
 }
+
+.chart-button {
+    width: 150px;
+}

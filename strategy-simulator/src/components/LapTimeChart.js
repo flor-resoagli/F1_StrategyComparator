@@ -47,7 +47,7 @@ function LapTimeChart({ Strategies, Circuit }) {
 
 
     return (
-        <div style={{ width: "100%" }}>
+        <div style={{ width: "80%" }}>
             <div className="chart-container">
             <LineChart
                 xAxis={[{ data: filteredXAxis, label: "Lap Number" }]}
