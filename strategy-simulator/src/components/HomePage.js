@@ -255,9 +255,9 @@ function HomePage() {
                         </div> 
                     </Grid>
                     <Grid size={3}>
-                        <h3>Strategies (max. 2)</h3>
+                        <h3>Strategies (max. 3)</h3>
                         <Button variant='contained' 
-                        disabled={strategies.length >= 2}
+                        disabled={strategies.length >= 3}
                         onClick={() => handleOpen()}
                         color='error'> Create Strategy </Button>
                         {strategies.map((strat, index) => (
